@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#153e35" />
+    <title>NovaTerra — biomass, made valuable</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+    <script src="https://jsdelivr.net"></script>
+    <script src="https://jsdelivr.net"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="#top" aria-label="NovaTerra home">
+          <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span>nova<span>terra</span></span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <button class="nav-item active" data-nav="Overview" data-view="dashboard"><span class="nav-icon grid-icon"></span>Overview</button>
+          <button class="nav-item" data-nav="My biomass" data-view="biomass"><span class="nav-icon leaf-icon"></span>My biomass</button>
+          <button class="nav-item decision-nav" data-nav="Decision lab" data-view="simulator"><span class="nav-icon spark-icon"></span>Decision lab <b class="ai-badge">AI</b></button>
+          <button class="nav-item" data-nav="Collections" data-view="collections"><span class="nav-icon truck-icon"></span>Collections <b>2</b></button>
+          <button class="nav-item" data-nav="Impact" data-view="impact"><span class="nav-icon impact-icon">◒</span>My impact</button>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <button class="help-button"><span class="question-mark">?</span> Help centre</button>
+          <div class="profile-card">
+            <div class="avatar">NS</div>
+            <div><strong>Nicha S.</strong><small>Ubon Ratchathani</small></div>
+            <button aria-label="Account menu" class="dots">•••</button>
+          </div>
+        </div>
+      </aside>
+
+      <main id="top" class="main-content">
+        <header class="topbar">
+          <button class="mobile-menu" aria-label="Open navigation">☰</button>
+          <div class="location"><span class="pin"></span><span>Ubon Ratchathani, Thailand</span><button aria-label="Change location">⌄</button></div>
+          <div class="top-actions">
+            <button class="icon-button notification" aria-label="Notifications"><span>♧</span><i></i></button>
+            <button class="language">EN <span>⌄</span></button>
+          </div>
+        </header>
+
+        <div id="dashboardView" class="dashboard-view">
+        <section class="intro">
+          <div>
+            <p class="eyebrow">SUNDAY, 30 AUGUST</p>
+            <h1>Good morning, <em>Nicha.</em></h1>
+            <p class="intro-copy">Your fields have more to give. Let’s put every residue to its best use.</p>
+          </div>
+          <button id="newListing" class="primary-button"><span>＋</span> List biomass</button>
+        </section>
+
+        <section class="dashboard-grid">
+          <article class="scan-card">
+            <div class="glow glow-one"></div><div class="glow glow-two"></div>
+            <div class="scan-card-copy">
+              <p class="eyebrow light">AI MOBILE CAMERA SCAN <span class="new-label">NEW</span></p>
+              <h2>What’s in<br />your field?</h2>
+              <p>Scan a sample for an instant type and quality check.</p>
+              <button id="startScan" class="scan-button"><span class="scanner-small" aria-hidden="true"></span> Scan biomass</button>
+            </div>
+            <div class="sample-orb" aria-hidden="true">
+              <div class="grain grain-1"></div><div class="grain grain-2"></div><div class="grain grain-3"></div><div class="grain grain-4"></div><div class="grain grain-5"></div><div class="grain grain-6"></div>
+              <div class="orb-label">AI<br />SCAN</div>
+            </div>
+            <div class="scan-card-footer"><span class="pulse-dot"></span> Supports rice straw, husk &amp; bagasse</div>
+          </article>
+
+          <article class="impact-card">
+            <div class="card-head"><div><p class="eyebrow">YOUR IMPACT</p><h3>This season</h3></div><button class="more" aria-label="More impact details">•••</button></div>
+            <div class="impact-rings" aria-label="26.4 tonnes CO2e avoided">
+              <svg viewBox="0 0 160 160" aria-hidden="true"><circle class="ring-bg" cx="80" cy="80" r="61"></circle><circle class="ring-fill" cx="80" cy="80" r="61"></circle></svg>
+              <div><strong>26.4</strong><span>tCO₂e<br />avoided</span></div>
+            </div>
+            <div class="impact-row"><span>Residue recovered</span><strong>48.6 t</strong><span class="trend">↗ 12%</span></div>
+            <p class="impact-note">That’s like keeping 5 cars off the road for a year.</p>
+          </article>
+        </section>
+
+        <section class="stat-grid" aria-label="Your biomass summary">
+          <article class="stat-card"><div class="stat-icon amber">↗</div><div><span>Available to list</span><strong>12.8 <small>t</small></strong></div><button class="arrow-link" aria-label="List available biomass">→</button></article>
+          <article class="stat-card"><div class="stat-icon mint">⌁</div><div><span>Next collection</span><strong class="date-stat">03 Sep <small>· 09:00</small></strong></div><button class="arrow-link" aria-label="View collection">→</button></article>
+          <article class="stat-card"><div class="stat-icon lilac">฿</div><div><span>Estimated earnings</span><strong>฿6,840</strong></div><button class="arrow-link" aria-label="View estimated earnings">→</button></article>
+        </section>
+
+        <section class="bottom-grid">
+          <article class="activity-card">
+            <div class="section-title"><div><p class="eyebrow">ACTIVITY</p><h3>Recent biomass</h3></div><button class="text-link">View all <span>→</span></button></div>
+            <div class="activity-table">
+              <div class="activity-row header-row"><span>Material</span><span>Status</span><span>Value</span></div>
+              <div class="activity-row"><div class="material"><span class="material-thumb straw"></span><div><strong>Rice straw</strong><small>24 Aug · 5.2 t</small></div></div><span class="status processing"><i></i>In processing</span><strong>฿2,600</strong></div>
+              <div class="activity-row"><div class="material"><span class="material-thumb husk"></span><div><strong>Rice husk</strong><small>08 Aug · 2.4 t</small></div></div><span class="status complete"><i></i>Completed</span><strong>฿1,440</strong></div>
+            </div>
+          </article>
+
+          <article class="route-card">
+            <div class="section-title"><div><p class="eyebrow">NEXT UP</p><h3>Collection route</h3></div><span class="route-date">03 SEP</span></div>
+            <div class="route-visual" aria-hidden="true"><div class="route-line"></div><span class="route-dot source"></span><span class="route-dot hub"></span><span class="mini-truck">▰</span><div class="route-source">YOUR FIELD<br /><b>09:00</b></div><div class="route-hub">KHONG CHIAM HUB<br /><b>11:20</b></div></div>
+            <div class="route-footer"><span class="route-avatar">KC</span><span><b>Khun Chai is your collector</b><small>Toyota pickup · 3 more stops nearby</small></span><button aria-label="Contact collector" class="contact-button">⌁</button></div>
+          </article>
+        </section>
+        </div>
+
+        <section id="simulatorView" class="simulator-view" aria-labelledby="engineTitle" hidden>
+          <div class="engine-intro">
+            <div>
+              <p class="eyebrow"><span class="live-mini-dot"></span> NOVATERRA AI SYSTEM</p>
+              <h1 id="engineTitle">Biomass <em>Decision Lab.</em></h1>
+              <p>Explore how the intelligence engine evaluates crop residue and finds the highest-value, lowest-impact pathway.</p>
+            </div>
+            <button id="scanFromLab" class="primary-button"><span class="scanner-small"></span> Start with a scan</button>
+          </div>
+
+          <div class="engine-notice"><span class="notice-spark">✦</span><span><b>Live decision simulator</b> — change any input to see a fresh quality grade, farmer offer and processing match.</span><span class="model-tag">ENGINE v2.4</span></div>
+
+          <div class="simulator-grid">
+            <form class="parameter-panel" onsubmit="return false">
+              <div class="panel-heading"><div><p class="eyebrow">01 / FIELD INPUTS</p><h2>Biomass parameters</h2></div><span class="input-state"><i></i> Ready</span></div>
+              <label class="field-label">Material type
+                <select id="biomassType" class="select-input">
+                  <option value="straw">Rice straw</option>
+                  <option value="husk">Rice husk</option>
+                  <option value="bagasse">Sugarcane bagasse</option>
+                </select>
+              </label>
+              <label class="field-label">Origin province
+                <select id="province" class="select-input">
+                  <option value="Khon Kaen">Khon Kaen · Northeast hub</option>
+                  <option value="Ubon Ratchathani">Ubon Ratchathani · East hub</option>
+                  <option value="Nakhon Ratchasima">Nakhon Ratchasima · Korat hub</option>
+                  <option value="Suphan Buri">Suphan Buri · Central hub</option>
+                </select>
+              </label>
+              <div class="range-field"><div class="field-label range-title"><span>Estimated volume</span><output id="volumeOutput">18 tonnes</output></div><input id="volume" type="range" min="1" max="60" value="18" /><div class="range-ticks"><span>1 t</span><span>60 t</span></div></div>
+              <div class="range-field"><div class="field-label range-title"><span>Moisture level</span><output id="moistureOutput">13%</output></div><input id="moisture" type="range" min="5" max="35" value="13" /><div id="moistureHint" class="moisture-hint good">Excellent for high-value fibre applications.</div></div>
+              <div class="contamination-section"><span class="field-label">Soil / dirt contamination</span><div class="segmented" role="radiogroup" aria-label="Soil or dirt contamination"><button class="contamination-choice active" data-contamination="low" role="radio" aria-checked="true">Low <small>&lt; 3%</small></button><button class="contamination-choice" data-contamination="medium" role="radio" aria-checked="false">Medium <small>3–8%</small></button><button class="contamination-choice" data-contamination="high" role="radio" aria-checked="false">High <small>&gt; 8%</small></button></div></div>
+              <div class="source-note"><span>⌖</span><p>Location, seasonality and current partner capacity are included in the decision score.</p></div>
+            </form>
+
+            <div class="results-panel">
+              <div class="panel-heading result-heading"><div><p class="eyebrow">02 / AI EVALUATION MATRIX</p><h2>Your optimal pathway</h2></div><span id="evaluationStatus" class="evaluation-status"><i></i> Analysing</span></div>
+              <div class="top-results">
+                <div class="grade-result"><span class="result-label">QUALITY GRADE</span><div class="grade-token"><strong id="gradeLetter">A</strong></div><b id="gradeName">Prime fibre</b><small id="gradeSubline">Clean &amp; dry field residue</small></div>
+                <div class="path-result"><span class="result-label">RECOMMENDED ROUTE</span><div class="route-title"><span class="route-leaf">✦</span><strong id="routeName">Moulded fibre packaging</strong></div><p id="routeDescription">Best fit for premium trays and foodware.</p><div class="route-flow"><span>Field source</span><i></i><span id="routeDestination">Fibre mill</span></div></div>
+              </div>
+              <div class="result-metrics">
+                <div><span>FARMER OFFER</span><strong id="payout">฿12,960</strong><small id="rate">฿720 / tonne</small></div>
+                <div><span>BURNING AVOIDED</span><strong id="co2">25.2 <small>tCO₂e</small></strong><small id="impactDescription">If residue is recovered</small></div>
+                <div><span>NET CIRCULAR VALUE</span><strong id="circularValue">High</strong><small id="valueHint">Local conversion match</small></div>
+              </div>
+              <div class="partner-match"><div class="partner-mark">N<span>+</span></div><div class="partner-copy"><span class="result-label">TOP PARTNER MATCH</span><h3 id="partnerName">GreenForm Fibre Works</h3><p id="partnerDetail">Moulded-fibre food packaging · 22 km catchment</p></div><div class="compatibility"><strong id="compatibilityScore">96.4%</strong><span>compatible</span><i><b id="compatibilityBar"></b></i></div></div>
+              <div class="score-breakdown"><div class="breakdown-header"><div><p class="eyebrow">WHY THIS DECISION</p><h3>Multi-factor score</h3></div><span id="totalScore" class="total-score">92 / 100</span></div><div class="score-row"><span>Material condition</span><div><i><b id="qualityScore"></b></i></div><strong id="qualityScoreLabel">94%</strong></div><div class="score-row"><span>Collection efficiency</span><div><i><b id="logisticsScore"></b></i></div><strong id="logisticsScoreLabel">89%</strong></div><div class="score-row"><span>Buyer demand signal</span><div><i><b id="demandScore"></b></i></div><strong id="demandScoreLabel">93%</strong></div></div>
+              <p class="explainability"><span>◎</span> NovaTerra selects the route with the strongest combined value, not simply the highest selling price.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="biomassView" class="farmer-view" aria-labelledby="biomassTitle" hidden>
+          <div class="farmer-page-intro">
+            <div><p class="eyebrow">MY FIELD INVENTORY</p><h1 id="biomassTitle">My <em>biomass.</em></h1><p>Every listed residue is quality-assessed, traceable and ready for a verified collection route.</p></div>
+            <button id="createListing" class="primary-button"><span>＋</span> List biomass</button>
+          </div>
+          <div class="inventory-summary"><div><span class="summary-icon field-icon">⌁</span><p>READY TO COLLECT</p><strong id="readyTonnes">12.8 <small>t</small></strong><small>Across 2 approved listings</small></div><div><span class="summary-icon money-icon">฿</span><p>OFFER VALUE</p><strong id="offerValue">฿8,040</strong><small>Estimated until hub check</small></div><div><span class="summary-icon leaf-summary">✦</span><p>BEST OPPORTUNITY</p><strong>Rice straw</strong><small>Dry-field grade A potential</small></div><div class="summary-advice"><span>AI NOTE</span><p>List dry rice straw within 48 hours to reserve the next collection route.</p><button id="adviceScan">Scan sample <b>→</b></button></div></div>
+          <div class="inventory-layout"><article class="listing-card"><div class="section-title"><div><p class="eyebrow">ACTIVE LISTINGS</p><h3>Materials in your queue</h3></div><div class="filter-pills"><button class="filter active">All</button><button class="filter">In progress</button></div></div><div id="listingFeed" class="listing-feed"><div class="listing-entry"><span class="listing-photo straw"></span><div class="listing-material"><strong>Rice straw · Field 03</strong><small>5.2 t · scanned 24 Aug · Grade A</small><span class="trace-tag">◎ Traceable sample</span></div><div class="listing-stage progress"><i></i><span>In processing</span><small>Partner confirmed</small></div><div class="listing-value"><strong>฿2,600</strong><small>Estimated value</small></div><button class="listing-more" aria-label="View rice straw listing">→</button></div><div class="listing-entry"><span class="listing-photo husk"></span><div class="listing-material"><strong>Rice husk · Mill lot</strong><small>2.4 t · scanned 08 Aug · Grade A</small><span class="trace-tag">◎ Traceable sample</span></div><div class="listing-stage complete"><i></i><span>Completed</span><small>Payment released</small></div><div class="listing-value"><strong>฿1,440</strong><small>Received</small></div><button class="listing-more" aria-label="View rice husk listing">→</button></div></div></article><aside class="listing-aside"><p class="eyebrow">YOUR NEXT STEP</p><h3>Prepare for hub check</h3><p>Keep your approved material covered and separated. The hub will confirm the final weight and moisture level.</p><div class="hub-check"><span>01</span><div><b>Collection pickup</b><small>03 Sep · 09:00</small></div><i></i></div><div class="hub-check"><span>02</span><div><b>Hub quality check</b><small>Same day at Khong Chiam</small></div></div><button class="text-link" data-view="collections">View route details <span>→</span></button></aside></div>
+        </section>
+
+        <section id="collectionsView" class="farmer-view" aria-labelledby="collectionTitle" hidden>
+          <div class="farmer-page-intro"><div><p class="eyebrow">COLLECTION NETWORK</p><h1 id="collectionTitle">Your next <em>pickup.</em></h1><p>NovaTerra groups nearby farms to make each collection route efficient, reliable and lower-carbon.</p></div><span class="route-status-chip"><i></i> Collector assigned</span></div>
+          <div class="collection-hero"><div class="route-map"><div class="map-grid"></div><span class="map-label farm-label">YOUR FIELD<br /><b>Ban Pa Ao</b></span><span class="map-label hub-label">KHONG CHIAM HUB<br /><b>Quality check</b></span><span class="route-node field-node"></span><span class="route-node hub-node"></span><div class="map-route"><i></i><i></i><i></i><i></i><i></i></div><span class="route-truck">▰</span><span class="route-km">21.6 km</span></div><div class="collection-details"><p class="eyebrow">TUESDAY · 03 SEPTEMBER</p><h2>Pickup window<br /><em>09:00 — 09:30</em></h2><div class="collector-card"><span class="collector-avatar">KC</span><div><strong>Khun Chai</strong><small>Your NovaTerra collector · 4.9 ★</small></div><button aria-label="Message Khun Chai">⌁</button></div><div class="collection-material"><span class="straw"></span><div><b>Rice straw · Field 03</b><small>Expected load: 5.2 tonnes</small></div><strong>Grade A</strong></div><button id="confirmPickup" class="primary-button confirm-button">Confirm material is ready <span>→</span></button><p id="pickupConfirmation" class="pickup-confirmation" aria-live="polite"></p></div></div>
+          <div class="collection-timeline"><div class="timeline-title"><p class="eyebrow">ROUTE STATUS</p><h3>What happens on collection day</h3></div><div class="timeline-step current"><span>1</span><div><b>Pickup scheduled</b><small>Route is optimised with three nearby farms.</small></div><em>Now</em></div><div class="timeline-step"><span>2</span><div><b>Material weighed at the hub</b><small>Final volume, moisture and contaminants are verified.</small></div><em>03 Sep</em></div><div class="timeline-step"><span>3</span><div><b>Final payment released</b><small>Your confirmed payout is available after quality grading.</small></div><em>04 Sep</em></div></div>
+        </section>
+
+        <section id="impactView" class="farmer-view" aria-labelledby="impactTitle" hidden>
+          <div class="farmer-page-intro"><div><p class="eyebrow">YOUR CIRCULAR CONTRIBUTION</p><h1 id="impactTitle">Value beyond <em>the field.</em></h1><p>Your collections are helping turn agricultural residues into useful products instead of smoke and waste.</p></div><button id="shareImpact" class="outline-button">Share impact summary <span>↗</span></button></div>
+          <div class="impact-hero"><div class="impact-hero-copy"><p class="eyebrow light">2026 HARVEST SEASON</p><h2>You’ve kept <em>26.4 tonnes</em><br />of CO₂e out of the air.</h2><p>That is the estimated impact of your verified residue collections to date.</p><div class="impact-hero-stats"><span><b>48.6 t</b> residue recovered</span><span><b>฿9,210</b> paid to you</span></div></div><div class="impact-orbit"><div class="orbit-ring ring-a"></div><div class="orbit-ring ring-b"></div><div class="impact-core"><b>54</b><small>trees worth<br />of benefit</small></div><span class="orbit-dot dot-a"></span><span class="orbit-dot dot-b"></span><span class="orbit-dot dot-c"></span></div></div>
+          <div class="impact-detail-grid"><article><span class="impact-detail-icon">↗</span><p>FARMER EARNINGS</p><strong>฿9,210</strong><small>From 3 completed collections</small><div class="growth-line"><i></i></div><b class="positive-growth">↑ 18% from last season</b></article><article><span class="impact-detail-icon">♲</span><p>VALUE CREATED</p><strong>4 pathways</strong><small>Biochar, fibre, silica &amp; energy</small><div class="pathway-tags"><span>Fibre</span><span>Biochar</span><span>Silica</span></div></article><article class="impact-certificate"><div><span>VERIFIED TRACKING</span><h3>Every collection has a route, a quality record and a final destination.</h3><button id="showCertificate">View latest trace record <b>→</b></button></div><div class="certificate-seal">NT<br /><small>TRACE</small></div></article></div>
+        </section>
+      </main>
+    </div>
+
+    <div id="listingModal" class="listing-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="listingTitle">
+      <div class="listing-dialog">
+        <button id="closeListing" class="drawer-close" aria-label="Close listing form">×</button>
+        <div class="listing-dialog-head"><p class="eyebrow">NEW BIOMASS LISTING</p><h2 id="listingTitle">Turn your scan into <em>a collection.</em></h2><p>NovaTerra will reserve a route after you confirm the field details below.</p></div>
+        <div class="listing-dialog-grid">
+          <div class="listing-scan-summary"><span class="result-label">AI SCAN SUMMARY</span><div class="scan-summary-visual"><div class="scan-summary-orb"><i></i><i></i><i></i></div><span id="listingScanBadge">Grade A</span></div><h3 id="listingScanName">Rice straw</h3><p id="listingScanDescription">High-potential sample · recommended for fibre packaging</p><button id="openLabFromListing" class="text-link">See AI decision details <span>→</span></button></div>
+          <form id="listingForm" class="listing-form" onsubmit="return false"><label class="field-label">Material type<select id="listingMaterial" class="select-input"><option value="straw">Rice straw</option><option value="husk">Rice husk</option><option value="bagasse">Sugarcane bagasse</option></select></label><div class="listing-form-row"><label class="field-label">Estimated volume<input id="listingVolume" type="number" min="1" max="60" value="5" /><small>tonnes</small></label><label class="field-label">Available from<input id="listingDate" type="date" /><small>collection date</small></label></div><label class="field-label">Collection point<div class="location-select"><span class="pin"></span> Ban Pa Ao, Ubon Ratchathani <button type="button">Change</button></div></label><div class="offer-preview"><div><span>ESTIMATED NOVATERRA OFFER</span><strong id="listingOffer">฿3,600</strong><small id="listingRate">฿720 / tonne · subject to hub check</small></div><span class="offer-badge">AI matched</span></div><label class="check-row"><input id="materialReady" type="checkbox" checked /><span></span>I confirm this material is dry, accessible and ready to collect.</label><button id="submitListing" class="primary-button listing-submit">Request collection <span>→</span></button><p id="listingFeedback" class="listing-feedback" aria-live="polite"></p></form>
+        </div>
+      </div>
+    </div>
+
+    <div id="scanModal" class="scan-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="scanTitle">
+      <div class="modal-topbar"><button id="closeScan" class="modal-close" aria-label="Close scan">×</button><span class="live-indicator"><i></i> LIVE SCAN</span><button id="flashButton" class="flash-button" aria-label="Toggle flashlight">ϟ</button></div>
+      <div class="camera-area">
+        <video id="cameraFeed" autoplay muted playsinline></video>
+        <img id="uploadedPreview" alt="Selected biomass sample" />
+        <div id="cameraFallback" class="camera-fallback" aria-hidden="true"><div class="field-horizon"></div><div class="straw-pile pile-a"></div><div class="straw-pile pile-b"></div><div class="straw-pile pile-c"></div></div>
+        <div class="scan-vignette"></div>
+        <div class="scan-box" aria-hidden="true"><span></span><span></span><span></span><span></span><div class="scan-beam"></div></div>
+        <div id="scanHint" class="scan-hint">Position the material inside the frame</div>
+        <div id="detectingBadge" class="detecting-badge">● Looking for biomass</div>
+        <div id="resultCard" class="result-card" aria-live="polite">
+          <button id="retake" class="retake">Retake</button>
+          <div class="result-icon">✓</div><p>Scan complete</p><h2 id="scanTitle">Rice straw</h2><div class="confidence"><span>Match confidence</span><b>94%</b></div><div class="confidence-bar"><i></i></div>
+          <div class="result-details"><span><small>QUALITY</small><b>Grade A</b></span><span><small>MOISTURE</small><b>14.2%</b></span><span><small>BEST FIT</small><b>Biochar</b></span></div>
+          <button id="useScan" class="primary-button use-scan">Use this scan <span>→</span></button>
+        </div>
+      </div>
+      <div class="modal-controls">
+        <label class="gallery-button" title="Choose an image"><input id="imageUpload" type="file" accept="image/*" capture="environment" /><span>▧</span><small>Gallery</small></label>
+        <button id="captureButton" class="capture-button" aria-label="Capture biomass photo"><i></i></button>
+        <button id="switchCamera" class="switch-button" aria-label="Switch camera">↻<small>Switch</small></button>
+      </div>
+    </div>
+
+    <div id="listingToast" class="listing-toast" role="status"><span>✓</span><div><strong>Scan sent to Decision Lab</strong><small>Inputs are ready for the AI evaluation</small></div><button aria-label="Dismiss">×</button></div>
+    <script src="script.js"></script>
+  </body>
+</html>
